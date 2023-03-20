@@ -1,7 +1,7 @@
+import itertools
 from datetime import date
-sundays=0
-for year in range(1901,2001):
-	for month in range(1,13):
-		if date(year,month,1).weekday()==6:
-			sundays+=1
+sundays = sum(
+	date(year, month, 1).weekday() == 6
+	for year, month in itertools.product(range(1901, 2001), range(1, 13))
+)
 print(sundays)

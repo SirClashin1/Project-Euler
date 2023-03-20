@@ -1,5 +1,3 @@
 Digits = str(2**1000)
-Sum = 0
-for i in range(len(Digits)):
-    Sum += int(Digits[i])
+Sum = sum(int(Digits[i]) for i in range(len(Digits)))
 print(Sum)

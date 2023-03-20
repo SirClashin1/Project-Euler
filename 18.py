@@ -18,11 +18,7 @@ grid = [
 for i in range(1, len(grid)):
         row = len(grid) - 1 - i
         for j in range(len(grid[row])):
-            if grid[row + 1][j] > grid[row + 1][j + 1]:
-                grid[row][j] += grid[row + 1][j]
-            elif grid[row + 1][j] <= grid[row + 1][j + 1]:
-                grid[row][j] += grid[row + 1][j + 1]
-
+                grid[row][j] += max(grid[row + 1][j], grid[row + 1][j + 1])
 print(grid[0][0])
 
 
